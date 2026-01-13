@@ -1,3 +1,4 @@
+import UseArrayExample from "./components/Hooks/UseArrayExample";
 import { SimplePost } from "./components/SimplePost";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         user="Alex"
         likesBy={['John','Mary']}
       />
+      <UseArrayExample />
     </>
   )
 }
