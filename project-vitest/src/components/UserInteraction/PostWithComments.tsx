@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-type Comment = {
+export type Comment = {
     content: string
 }
 
