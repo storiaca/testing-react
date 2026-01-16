@@ -30,6 +30,8 @@ describe('Shopping list test suite', () => {
         expect(ingredientItems).toHaveLength(3)
         const milkIngredient = ingredientItems[0];
         await user.click(milkIngredient)
+        expect(someFunctionSpy).toHaveBeenCalledOnce()
+        expect(someFunctionSpy).toHaveBeenCalledWith('milk')
     })
 
     it('should select ingredients - external spy', async () => {
@@ -41,8 +43,14 @@ describe('Shopping list test suite', () => {
             selectItem={Utils.onItemSelect}
         />)
         const user = userEvent.setup();
-
-        
+        const shoppingList = screen.getByRole('list')
+        expect(shoppingList).toBeInTheDocument();
+        const ingredientItems = within(shoppingList).getAllByRole('listitem');
+        expect(ingredientItems).toHaveLength(3)
+        const milkIngredient = ingredientItems[0];
+        await user.click(milkIngredient)
+        expect(onItemSelectSpy).toHaveBeenCalledOnce()
+        expect(onItemSelectSpy).toHaveBeenCalledWith('milk')
     })
 
     it('should select ingredients - external spy and Date spy', async () => {
@@ -53,7 +61,14 @@ describe('Shopping list test suite', () => {
             selectItem={Utils.onItemSelectWithTime}
         />)
         const user = userEvent.setup();
-
+        
+        const shoppingList = screen.getByRole('list')
+        const ingredientItems = within(shoppingList).getAllByRole('listitem');
+        const milkIngredient = ingredientItems[0];
+        await user.click(milkIngredient)
+        expect(onItemSelectSpy).toHaveBeenCalledWith(ingredients[0])
+        expect(onItemSelectSpy).toHaveBeenCalledTimes(1)
+        expect(dateSpy).toHaveBeenCalled()
         
     })
 
@@ -65,6 +80,12 @@ describe('Shopping list test suite', () => {
         />)
         const user = userEvent.setup();
 
+        const shoppingList = screen.getByRole('list')
+        const ingredientItems = within(shoppingList).getAllByRole('listitem');
+        const milkIngredient = ingredientItems[0];
+        await user.click(milkIngredient)
+        expect(selectItemMock).toHaveBeenCalledWith(ingredients[0])
+        expect(selectItemMock).toHaveBeenCalledTimes(1)
     })
 
 })

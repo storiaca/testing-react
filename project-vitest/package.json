@@ -12,7 +12,8 @@
     "coverage": "vitest run --coverage",
     "test-file": "vitest src/Sample.test.tsx",
     "test-array": "vitest src/components/Hooks/UseArray.test.tsx",
-    "test-errors": "vitest src/components/Shopping"
+    "test-errors": "vitest src/components/Shopping",
+    "test-doubles": "vitest src/components/5Doubles"
   },
   "dependencies": {
     "react": "^19.2.0",
