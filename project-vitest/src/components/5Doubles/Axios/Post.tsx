@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getCommentsForPostWithAxios } from "./DataService";
-import { Comment } from "./Model";
+import type { Comment } from "./Model";
 
 let nextId = 0;
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Comment } from "./Model";
+import type { Comment } from "./Model";
 
 const APP_URL = 'http://localhost:4000'
 
