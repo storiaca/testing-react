@@ -16,6 +16,7 @@
     "test-doubles": "vitest src/components/5Doubles"
   },
   "dependencies": {
+    "axios": "^1.13.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
