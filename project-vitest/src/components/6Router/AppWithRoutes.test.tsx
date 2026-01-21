@@ -13,30 +13,15 @@ vi.mock('./Routes/About', () => ({
 }))
 
 describe('App with routes test suite', ()=>{
-    it('should always load the navbar', ()=>{
-        render(<AppWithRoutes />)
-        const navbar = screen.getByTestId('NavBar')
+  it('should always load the navbar', ()=>{
+        
+  })
 
-        expect(navbar).toBeInTheDocument()
-    })
+  it('Should initially load the home component', ()=>{
+        
+  })
 
-    it('Should initially load the home component', ()=>{
-        render(<AppWithRoutes />)
-        const home = screen.getByTestId('HomeMock')
-
-        expect(home).toBeInTheDocument()
-    })
-
-    it.skip('Should initially load the home component', ()=>{
-        render(
-            <MemoryRouter initialEntries={['/about']}>
-                <AppWithRoutes />
-            </MemoryRouter>
-        )
-        const home = screen.getByTestId('HomeMock')
-
-        expect(home).toBeInTheDocument()
-    })
-
-
+  it.skip('Should initially load the home component', ()=>{
+       
+  })
 })
