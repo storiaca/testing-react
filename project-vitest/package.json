@@ -13,7 +13,9 @@
     "test-file": "vitest src/Sample.test.tsx",
     "test-array": "vitest src/components/Hooks/UseArray.test.tsx",
     "test-errors": "vitest src/components/Shopping",
-    "test-doubles": "vitest src/components/5Doubles"
+    "test-doubles": "vitest src/components/5Doubles",
+    "test-router": "vitest src/components/6Router"
+
   },
   "dependencies": {
     "axios": "^1.13.2",
