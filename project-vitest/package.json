@@ -15,7 +15,9 @@
     "test-errors": "vitest src/components/Shopping",
     "test-doubles": "vitest src/components/5Doubles",
     "test-router": "vitest src/components/6Router",
-    "test-snapshot": "vitest src/components/7Snapshots"
+    "test-snapshot": "vitest src/components/7Snapshots",
+    "test-tdd": "vitest src/components/8TDD"
+
   },
   "dependencies": {
     "axios": "^1.13.2",

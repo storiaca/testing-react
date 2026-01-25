@@ -1,4 +1,4 @@
-import { Comment } from "./Model";
+import { type Comment } from "./Model";
 
 export async function getCommentsForPost(id: string): Promise<Comment[]> {
     console.log(`getting comments for post ${id}`)

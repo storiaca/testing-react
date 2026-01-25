@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Comment } from "./Model";
+import { type Comment } from "./Model";
 import { getCommentsForPost, postComment } from "./DataService";
 
 let nextId = 0;
